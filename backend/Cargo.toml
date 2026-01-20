@@ -1,0 +1,23 @@
+[package]
+name = "currency-converter"
+description = "Interactive currency converter fetching real-time rates (MYR base) from Frankfurter API"
+version = "0.1.1"
+authors = ["Tang Wei Chiang <tangweichiang0109@gmail.com>", "Antoni Kepinski <a@kepinski.me> (https://kepinski.me)"]
+keywords = ["currency", "converter", "exchange", "rates", "cli"]
+license = "MIT"
+readme = "README.md"
+edition = "2021"
+
+
+[dependencies]
+axum = "0.7"              
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+cashify = "0.1"             
+tower-http = { version = "0.5", features = ["cors", "trace"] } 
+
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
