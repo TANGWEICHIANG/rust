@@ -1,10 +1,16 @@
 [package]
 name = "currency-converter"
-version = "0.1.0"
-edition = "2024"
+description = "Interactive currency converter fetching real-time rates (MYR base) from Frankfurter API"
+version = "0.1.1"
+authors = ["Tang Wei Chiang <tangweichiang0109@gmail.com>", "Antoni Kepinski <a@kepinski.me> (https://kepinski.me)"]
+keywords = ["currency", "converter", "exchange", "rates", "cli"]
+license = "MIT"
+readme = "README.md"
+edition = "2021"
+
 
 [dependencies]
+anyhow = "1.0.100"
 cashify = "0.1"
-reqwest = { version = "0.13.1", features = ["json"] }
-serde = { version = "1.0.228", features = ["derive"] }
-tokio = { version = "1.49.0", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "blocking"] }
+serde = { version = "1.0", features = ["derive"] }
