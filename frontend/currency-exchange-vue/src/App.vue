@@ -4,9 +4,9 @@ import { RatesResponse, ConversionResult, HistoryItem } from '../types';
 import { getCurrencyName, getCountryCode, handleFlagError } from './utils/currencies.js';
 import { languages, defaultLocale } from './utils/languages.js';
 
-const API_BASE = import.meta.env.VITE_APP_ENDPOINT //prod-backend URL
-  ? import.meta.env.VITE_APP_ENDPOINT
-  : 'http://localhost:3000'; //dev backend URL
+const API_BASE = import.meta.env.VITE_APP_ENDPOINT 
+  ? import.meta.env.VITE_APP_ENDPOINT + '/api'
+  : 'http://localhost:3000/api'; //dev backend URL
 
 const currentLocale = ref(defaultLocale);
 const t = computed(() => languages[currentLocale.value]);
