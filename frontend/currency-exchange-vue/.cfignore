@@ -1,0 +1,6 @@
+# .cfignore
+wrangler.toml
+Cargo.toml
+Cargo.lock
+src/lib.rs
+target/
